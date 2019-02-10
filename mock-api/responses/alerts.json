@@ -1,0 +1,982 @@
+{
+  "alertTypes": [
+    {
+      "name": "primary",
+      "label": "Priority alerts"
+    },
+    {
+      "name": "secondary",
+      "label": "Secondary alerts"
+    }
+  ],
+  "periods": [
+    {
+      "name": "0-7",
+      "label": "0 - 7 days"
+    },
+    {
+      "name": "7-14",
+      "label": "7 - 14 days"
+    },
+    {
+      "name": "14-*",
+      "label": "\u003E14 days"
+    }
+  ],
+  "lines": [
+    {
+      "lineId": "15998",
+      "label": "543"
+    },
+    {
+      "lineId": "16488",
+      "label": "560"
+    },
+    {
+      "lineId": "16498",
+      "label": "571"
+    },
+    {
+      "lineId": "16878",
+      "label": "570"
+    },
+    {
+      "lineId": "16888",
+      "label": "572"
+    },
+    {
+      "lineId": "16898",
+      "label": "574"
+    },
+    {
+      "lineId": "16908",
+      "label": "573"
+    },
+    {
+      "lineId": "16918",
+      "label": "N573"
+    },
+    {
+      "lineId": "17628",
+      "label": "561"
+    },
+    {
+      "lineId": "17638",
+      "label": "576"
+    },
+    {
+      "lineId": "17758",
+      "label": "562"
+    },
+    {
+      "lineId": "18528",
+      "label": "441"
+    },
+    {
+      "lineId": "18878",
+      "label": "558"
+    },
+    {
+      "lineId": "18918",
+      "label": "N574"
+    },
+    {
+      "lineId": "18928",
+      "label": "563"
+    },
+    {
+      "lineId": "19238",
+      "label": "556"
+    },
+    {
+      "lineId": "19348",
+      "label": "535"
+    },
+    {
+      "lineId": "19388",
+      "label": "538"
+    },
+    {
+      "lineId": "19398",
+      "label": "N570"
+    },
+    {
+      "lineId": "19478",
+      "label": "580"
+    },
+    {
+      "lineId": "19498",
+      "label": "578"
+    },
+    {
+      "lineId": "19508",
+      "label": "579"
+    },
+    {
+      "lineId": "19668",
+      "label": "577"
+    },
+    {
+      "lineId": "21318",
+      "label": "N421"
+    },
+    {
+      "lineId": "21338",
+      "label": "1421"
+    },
+    {
+      "lineId": "21348",
+      "label": "1422"
+    },
+    {
+      "lineId": "21708",
+      "label": "N575"
+    },
+    {
+      "lineId": "21768",
+      "label": "557"
+    },
+    {
+      "lineId": "21898",
+      "label": "N569"
+    },
+    {
+      "lineId": "22008",
+      "label": "575"
+    },
+    {
+      "lineId": "22088",
+      "label": "568"
+    },
+    {
+      "lineId": "22238",
+      "label": "567"
+    },
+    {
+      "lineId": "22268",
+      "label": "565"
+    },
+    {
+      "lineId": "22568",
+      "label": "564"
+    },
+    {
+      "lineId": "22578",
+      "label": "1564"
+    },
+    {
+      "lineId": "22678",
+      "label": "581"
+    },
+    {
+      "lineId": "22688",
+      "label": "587"
+    },
+    {
+      "lineId": "22698",
+      "label": "589"
+    },
+    {
+      "lineId": "22718",
+      "label": "N582"
+    },
+    {
+      "lineId": "22958",
+      "label": "1551"
+    },
+    {
+      "lineId": "22968",
+      "label": "1553"
+    },
+    {
+      "lineId": "22978",
+      "label": "1554"
+    },
+    {
+      "lineId": "22988",
+      "label": "1556"
+    },
+    {
+      "lineId": "22998",
+      "label": "1559"
+    },
+    {
+      "lineId": "23188",
+      "label": "588"
+    },
+    {
+      "lineId": "23198",
+      "label": "N588"
+    },
+    {
+      "lineId": "23218",
+      "label": "585"
+    },
+    {
+      "lineId": "23228",
+      "label": "A588"
+    },
+    {
+      "lineId": "23238",
+      "label": "A587"
+    },
+    {
+      "lineId": "23978",
+      "label": "1589"
+    },
+    {
+      "lineId": "24341",
+      "label": "1509"
+    },
+    {
+      "lineId": "24351",
+      "label": "1518"
+    },
+    {
+      "lineId": "24381",
+      "label": "N1501"
+    },
+    {
+      "lineId": "24391",
+      "label": "1520"
+    },
+    {
+      "lineId": "24401",
+      "label": "1550"
+    },
+    {
+      "lineId": "24431",
+      "label": "N426"
+    }
+  ],
+  "alerts": [
+    {
+      "lineId": "16878",
+      "periodName": "0-7",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 16
+        }
+      }
+    },
+    {
+      "lineId": "19508",
+      "periodName": "0-7",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 5
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "16918",
+      "periodName": "0-7",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 125
+        }
+      }
+    },
+    {
+      "lineId": "16898",
+      "periodName": "0-7",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 2
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "16908",
+      "periodName": "0-7",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 53
+        }
+      }
+    },
+    {
+      "lineId": "19508",
+      "periodName": "14-*",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 4
+        }
+      }
+    },
+    {
+      "lineId": "17638",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 12
+        }
+      }
+    },
+    {
+      "lineId": "18878",
+      "periodName": "0-7",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 5
+        }
+      }
+    },
+    {
+      "lineId": "19238",
+      "periodName": "0-7",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 7
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "18928",
+      "periodName": "0-7",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 8
+        }
+      }
+    },
+    {
+      "lineId": "22978",
+      "periodName": "0-7",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 2
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "16888",
+      "periodName": "7-14",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 3
+        }
+      }
+    },
+    {
+      "lineId": "19508",
+      "periodName": "7-14",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "16878",
+      "periodName": "7-14",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 3
+        },
+        "decrease": {
+          "ridesTotal": 25
+        }
+      }
+    },
+    {
+      "lineId": "19388",
+      "periodName": "7-14",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 16
+        }
+      }
+    },
+    {
+      "lineId": "16888",
+      "periodName": "14-*",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 3
+        }
+      }
+    },
+    {
+      "lineId": "22698",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 3
+        },
+        "decrease": {
+          "ridesTotal": 27
+        }
+      }
+    },
+    {
+      "lineId": "22698",
+      "periodName": "7-14",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 3
+        }
+      }
+    },
+    {
+      "lineId": "17758",
+      "periodName": "7-14",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 30
+        }
+      }
+    },
+    {
+      "lineId": "22698",
+      "periodName": "14-*",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 1
+        }
+      }
+    },
+    {
+      "lineId": "19388",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "22718",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 11
+        }
+      }
+    },
+    {
+      "lineId": "23188",
+      "periodName": "7-14",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 2
+        }
+      }
+    },
+    {
+      "lineId": "22688",
+      "periodName": "7-14",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "24351",
+      "periodName": "14-*",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 1
+        }
+      }
+    },
+    {
+      "lineId": "22978",
+      "periodName": "14-*",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 1
+        }
+      }
+    },
+    {
+      "lineId": "23188",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "22088",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 42
+        }
+      }
+    },
+    {
+      "lineId": "22958",
+      "periodName": "7-14",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 2
+        }
+      }
+    },
+    {
+      "lineId": "16888",
+      "periodName": "7-14",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 2
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "22088",
+      "periodName": "7-14",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 22
+        }
+      }
+    },
+    {
+      "lineId": "22698",
+      "periodName": "7-14",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 9
+        }
+      }
+    },
+    {
+      "lineId": "22958",
+      "periodName": "14-*",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 39
+        }
+      }
+    },
+    {
+      "lineId": "16878",
+      "periodName": "14-*",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "19398",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "22978",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 7
+        }
+      }
+    },
+    {
+      "lineId": "24391",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 5
+        }
+      }
+    },
+    {
+      "lineId": "16888",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 2
+        }
+      }
+    },
+    {
+      "lineId": "16898",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "23188",
+      "periodName": "14-*",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "16878",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "22968",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 1
+        }
+      }
+    },
+    {
+      "lineId": "22958",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 44
+        }
+      }
+    },
+    {
+      "lineId": "18918",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "19508",
+      "periodName": "0-7",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 3
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "19398",
+      "periodName": "0-7",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 6
+        },
+        "decrease": {
+          "ridesTotal": 25
+        }
+      }
+    },
+    {
+      "lineId": "23188",
+      "periodName": "0-7",
+      "typeName": "primary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "16878",
+      "periodName": "0-7",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 3
+        },
+        "decrease": {
+          "ridesTotal": 29
+        }
+      }
+    },
+    {
+      "lineId": "16908",
+      "periodName": "7-14",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "23218",
+      "periodName": "7-14",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 16
+        }
+      }
+    },
+    {
+      "lineId": "22008",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "24381",
+      "periodName": "7-14",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 1
+        },
+        "decrease": {
+          "ridesTotal": 0
+        }
+      }
+    },
+    {
+      "lineId": "19508",
+      "periodName": "7-14",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 26
+        }
+      }
+    },
+    {
+      "lineId": "19238",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 1
+        }
+      }
+    },
+    {
+      "lineId": "16498",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 1
+        }
+      }
+    },
+    {
+      "lineId": "23218",
+      "periodName": "14-*",
+      "typeName": "secondary",
+      "tags": {
+        "increase": {
+          "ridesTotal": 0
+        },
+        "decrease": {
+          "ridesTotal": 14
+        }
+      }
+    }
+  ]
+}
