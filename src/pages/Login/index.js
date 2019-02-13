@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import * as userActions from "../../data/redux/userDetails/actions";
+import * as userActions from "../../data/redux/userDetails/userDetails.actions";
 
 function mapStateToProps(state) {
   return {

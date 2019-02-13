@@ -14,3 +14,11 @@ export const appPages = {
   ai: "ai",
   inbox: "inbox"
 };
+
+export const STATUS = {
+  IDLE: "status/IDLE",
+  LOADING: "status/LOADING",
+  READY: "status/READY",
+  SUCCESS: "status/SUCCESS",
+  ERROR: "status/ERROR"
+};

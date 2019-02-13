@@ -1,41 +1,47 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import classNames from "classnames";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import React, { Component } from "react";
 
 import RouteContainer from "./RouteContainer";
 
 import * as UTILS from "../data/utils/deviceData";
-import pageActions from "../data/redux/pageDetails/actions";
+import pageActions from "../data/redux/pageDetails/pageDetails.actions";
 
 class AppContainer extends Component {
   componentWillMount() {
-    const { dispatch } = this.props;
-    const { systLangSet, deviceDataLoaded } = pageActions;
+    const {
+      actions: { pageActions }
+    } = this.props;
+
+    const { setSystemLanguage, setDeviceData } = pageActions;
     const deviceData = UTILS.checkDevice.deviceStatus();
     const systLang = UTILS.getLang();
 
-    // dispatch(deviceDataLoaded(deviceData));
-    // if (systLang) {
-    //   dispatch(systLangSet(systLang));
-    // }
+    setDeviceData(deviceData);
+    if (systLang) {
+      setSystemLanguage(systLang);
+    }
     this.timeout = false;
   }
 
   componentDidMount() {
-    const { dispatch } = this.props;
-    const { deviceDataLoaded } = pageActions;
-    // window.addEventListener("resize", () => {
-    //   clearTimeout(this.timeout);
-    //   this.timeout = setTimeout(() => {
-    //     dispatch(deviceDataLoaded(UTILS.checkDevice.deviceStatus()));
-    //   }, 300);
-    // });
+    window.addEventListener("resize", () => {
+      clearTimeout(this.timeout);
+      this.timeout = setTimeout(() => {
+        const deviceData = UTILS.checkDevice.deviceStatus();
+        this.props.actions.pageActions.setDeviceData(deviceData);
+      }, 300);
+    });
   }
 
   render() {
-    const { pageDetails } = this.props;
-    const isMobile = true;
+    const {
+      pageDetails: { deviceData }
+    } = this.props;
+    const isMobile =
+      deviceData && (deviceData.mobile || deviceData.screen_width < 768);
 
     return (
       <div
@@ -55,10 +61,23 @@ AppContainer.propTypes = {
   actions: PropTypes.object
 };
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   return {
     pageDetails: state.pageDetails
   };
-}
+};
 
-export default connect(mapStateToProps)(AppContainer);
+const mapDispatchToProps = dispatch => {
+  console.log(pageActions);
+
+  return {
+    actions: {
+      pageActions: bindActionCreators(pageActions.pageDetails, dispatch)
+    }
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AppContainer);

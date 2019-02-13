@@ -1,18 +1,19 @@
-import { ActionTypes, STATUS } from "../actionTypes";
-import defaultState from "./states";
+import { STATUS } from "../../config/constants";
+import userActionTypes from "./userDetails.actionTypes";
+import defaultState from "./userDetails.states";
 import { handleActions } from "redux-actions";
 import update from "immutability-helper";
 
 export default handleActions(
   {
-    [ActionTypes.USER_LOGIN_LOADING]: state => {
+    [userActionTypes.USER_LOGIN_LOADING]: state => {
       return update(state, {
         userDetails: {
           status: { userLogin: { $set: STATUS.LOADING } }
         }
       });
     },
-    [ActionTypes.USER_LOGIN_SUCCESS]: (state, { payload }) => {
+    [userActionTypes.USER_LOGIN_SUCCESS]: (state, { payload }) => {
       return update(state, {
         userDetails: {
           user: { $set: payload.user },
@@ -20,7 +21,7 @@ export default handleActions(
         }
       });
     },
-    [ActionTypes.USER_LOGIN_ERROR]: (state, { payload }) => {
+    [userActionTypes.USER_LOGIN_ERROR]: (state, { payload }) => {
       return update(state, {
         userDetails: {
           user: { $set: payload.user },

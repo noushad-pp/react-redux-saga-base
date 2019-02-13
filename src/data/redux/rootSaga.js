@@ -1,8 +1,10 @@
 import { fork } from "redux-saga/effects";
-import pageSaga from "./pageDetails/saga";
-import userSaga from "./userDetails/saga";
+import pageSaga from "./pageDetails/pageDetails.saga";
+import userSaga from "./userDetails/userDetails.saga";
 
-export default function* rootSaga() {
+function* rootSaga() {
   yield fork(pageSaga);
   yield fork(userSaga);
 }
+
+export default rootSaga;

@@ -1,31 +1,31 @@
-import { ActionTypes } from "../actionTypes";
+import pageActionTypes from "./pageDetails.actionTypes";
 import { all, put, takeLatest } from "redux-saga/effects";
 
 export function* setSystLang({ lang }) {
   yield put({
-    type: ActionTypes.SYST_LANG_SET,
+    type: pageActionTypes.SET_SYSTEM_LANGUAGE,
     payload: { lang }
   });
 }
 
 export function* setDeviceData({ deviceData }) {
   yield put({
-    type: ActionTypes.DEVICE_DATA_LOADED,
+    type: pageActionTypes.SET_DEVICE_DATA,
     payload: { deviceData }
   });
 }
 
 export function* setCurrentPage({ currentPage }) {
   yield put({
-    type: ActionTypes.PAGE_CHANGED,
+    type: pageActionTypes.SET_PAGE,
     payload: { currentPage }
   });
 }
 
 export default function* pageSagas() {
   yield all([
-    takeLatest(ActionTypes.SYST_LANG_SET, setSystLang),
-    takeLatest(ActionTypes.DEVICE_DATA_LOADED, setDeviceData),
-    takeLatest(ActionTypes.PAGE_CHANGED, setCurrentPage)
+    takeLatest(pageActionTypes.SET_SYSTEM_LANGUAGE, setSystLang),
+    takeLatest(pageActionTypes.SET_DEVICE_DATA, setDeviceData),
+    takeLatest(pageActionTypes.SET_PAGE, setCurrentPage)
   ]);
 }

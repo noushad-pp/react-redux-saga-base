@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
 import { connectRouter } from "connected-react-router";
 
-import pageDetails from "./pageDetails/reducers";
-import userDetails from "./userDetails/reducers";
+import pageDetails from "./pageDetails/pageDetails.reducers";
+import userDetails from "./userDetails/userDetails.reducers";
 
 const rootReducer = history =>
   combineReducers({

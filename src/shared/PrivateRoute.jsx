@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Redirect, Route } from "react-router";
-import { isLoggedIn } from "../data/redux/userDetails/selectors";
+import { isLoggedIn } from "../data/redux/userDetails/userDetails.selectors";
 
 const chooseComponent = (Component, isAuthenticated) => props => {
   return isAuthenticated ? (
