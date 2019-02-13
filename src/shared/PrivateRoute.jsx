@@ -26,6 +26,8 @@ class PrivateRoute extends React.PureComponent {
   }
 }
 
-export default connect(state => ({
-  isAuthenticated: isLoggedIn(state)
-}))(PrivateRoute);
+export default connect(state => {
+  return {
+    isAuthenticated: isLoggedIn(state)
+  };
+})(PrivateRoute);

@@ -6,17 +6,10 @@ import update from "immutability-helper";
 export default handleActions(
   new Map([
     [
-      pageActions.pageDetails.setSystemLanguage,
-      (state, { payload }) =>
-        update(state, {
-          currentPage: { $set: payload.currentPage }
-        })
-    ],
-    [
       pageActions.pageDetails.setDeviceData,
       (state, { payload }) =>
         update(state, {
-          deviceData: { $set: payload["deviceData"] }
+          deviceData: { $set: payload.deviceData }
         })
     ],
     [

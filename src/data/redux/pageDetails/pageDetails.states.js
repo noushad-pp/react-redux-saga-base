@@ -1,5 +1,4 @@
 const pageDetails = {
-  lang: "en",
   deviceData: null,
   currentPage: null
 };

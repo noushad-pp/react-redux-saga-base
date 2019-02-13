@@ -2,27 +2,13 @@ import { bindActionCreators } from "redux";
 import classNames from "classnames";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import React, { Component } from "react";
-
-import RouteContainer from "./RouteContainer";
-
-import * as UTILS from "../data/utils/deviceData";
 import pageActions from "../data/redux/pageDetails/pageDetails.actions";
+import React, { Component } from "react";
+import RouteContainer from "./RouteContainer";
 
 class AppContainer extends Component {
   componentWillMount() {
-    const {
-      actions: { pageActions }
-    } = this.props;
-
-    const { setSystemLanguage, setDeviceData } = pageActions;
-    const deviceData = UTILS.checkDevice.deviceStatus();
-    const systLang = UTILS.getLang();
-
-    setDeviceData(deviceData);
-    if (systLang) {
-      setSystemLanguage(systLang);
-    }
+    this.props.actions.triggerSetDeviceData();
     this.timeout = false;
   }
 
@@ -30,8 +16,7 @@ class AppContainer extends Component {
     window.addEventListener("resize", () => {
       clearTimeout(this.timeout);
       this.timeout = setTimeout(() => {
-        const deviceData = UTILS.checkDevice.deviceStatus();
-        this.props.actions.pageActions.setDeviceData(deviceData);
+        this.props.actions.triggerSetDeviceData();
       }, 300);
     });
   }
@@ -68,12 +53,13 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  console.log(pageActions);
-
   return {
-    actions: {
-      pageActions: bindActionCreators(pageActions.pageDetails, dispatch)
-    }
+    actions: bindActionCreators(
+      {
+        triggerSetDeviceData: pageActions.pageDetails.triggerSetDeviceData
+      },
+      dispatch
+    )
   };
 };
 

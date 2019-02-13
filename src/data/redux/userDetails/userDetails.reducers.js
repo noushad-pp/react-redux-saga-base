@@ -1,35 +1,44 @@
 import { STATUS } from "../../config/constants";
-import userActionTypes from "./userDetails.actionTypes";
+import userActions from "./userDetails.actions";
 import defaultState from "./userDetails.states";
 import { handleActions } from "redux-actions";
 import update from "immutability-helper";
 
 export default handleActions(
-  {
-    [userActionTypes.USER_LOGIN_LOADING]: state => {
-      return update(state, {
-        userDetails: {
+  new Map([
+    [
+      userActions.userDetails.loginLoading,
+      state =>
+        update(state, {
           status: { userLogin: { $set: STATUS.LOADING } }
-        }
-      });
-    },
-    [userActionTypes.USER_LOGIN_SUCCESS]: (state, { payload }) => {
-      return update(state, {
-        userDetails: {
+        })
+    ],
+    [
+      userActions.userDetails.loginSuccess,
+      (state, { payload }) =>
+        update(state, {
           user: { $set: payload.user },
           status: { userLogin: { $set: STATUS.SUCCESS } }
-        }
-      });
-    },
-    [userActionTypes.USER_LOGIN_ERROR]: (state, { payload }) => {
-      return update(state, {
-        userDetails: {
-          user: { $set: payload.user },
+        })
+    ],
+    [
+      userActions.userDetails.loginError,
+      (state, { payload }) =>
+        update(state, {
+          user: { $set: null },
           status: { userLogin: { $set: STATUS.ERROR } },
           errors: { userLogin: { $set: payload.err } }
-        }
-      });
-    }
-  },
+        })
+    ],
+    [
+      userActions.userDetails.logout,
+      state =>
+        update(state, {
+          user: { $set: null },
+          status: { userLogin: { $set: null } },
+          errors: { userLogin: { $set: null } }
+        })
+    ]
+  ]),
   defaultState
 );

@@ -1,25 +1,34 @@
-import { all, call, delay, put, takeLatest } from "redux-saga/effects";
+import { all, delay, put, takeLatest } from "redux-saga/effects";
 
-import userActionTypes from "./userDetails.actionTypes";
+import userActions from "./userDetails.actions";
 
 export function* login() {
   try {
     yield put({
-      type: userActionTypes.USER_LOGIN_LOADING
+      type: userActions.userDetails.loginLoading.toString()
     });
-    yield call(delay, 400);
+    yield delay(500);
 
     yield put({
-      type: userActionTypes.USER_LOGIN_SUCCESS
+      type: userActions.userDetails.loginSuccess.toString(),
+      payload: {
+        user: {
+          id: 1,
+          name: "John Doe",
+          email: "john.doe@email.com"
+        }
+      }
     });
   } catch (err) {
     yield put({
-      type: userActionTypes.USER_LOGIN_FAILURE,
+      type: userActions.userDetails.loginError.toString(),
       payload: err
     });
   }
 }
 
 export default function* rootUserSaga() {
-  yield all([takeLatest(userActionTypes.USER_LOGIN, login)]);
+  yield all([
+    takeLatest(userActions.userDetails.triggerLogin.toString(), login)
+  ]);
 }
