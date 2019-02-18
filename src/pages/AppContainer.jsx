@@ -4,7 +4,10 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import pageActions from "../data/redux/pageDetails/pageDetails.actions";
 import React, { Component } from "react";
+
+import "./AppContainer.scss";
 import RouteContainer from "./RouteContainer";
+import Sidebar from "../shared/Sidebar";
 
 class AppContainer extends Component {
   componentWillMount() {
@@ -27,6 +30,7 @@ class AppContainer extends Component {
     } = this.props;
     const isMobile =
       deviceData && (deviceData.mobile || deviceData.screen_width < 768);
+    const showSidebar = true;
 
     return (
       <div
@@ -35,7 +39,16 @@ class AppContainer extends Component {
           { mobile: isMobile }
         )}
       >
-        <RouteContainer />
+        <div className="appContainer">
+          {showSidebar &&
+            <div className="appSidebar">
+              <Sidebar />
+            </div>
+          }
+          <div className="appContent">
+            <RouteContainer />
+          </div>
+        </div>
       </div>
     );
   }

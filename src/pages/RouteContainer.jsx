@@ -10,13 +10,15 @@ import PrivateRoute from "../shared/PrivateRoute";
 class RouteContainer extends Component {
   render() {
     return (
-      <Router history={this.props.history}>
-        <Switch>
-          <PrivateRoute exact={true} path="/" component={Home} />
-          <Route exact={true} path="/login" component={Login} />
-          <Route component={NotFound} />
-        </Switch>
-      </Router>
+      <div className="pageContainer">
+        <Router history={this.props.history}>
+          <Switch>
+            <PrivateRoute exact={true} path="/" component={Home} />
+            <Route exact={true} path="/login" component={Login} />
+            <Route component={NotFound} />
+          </Switch>
+        </Router>
+      </div>
     );
   }
 }

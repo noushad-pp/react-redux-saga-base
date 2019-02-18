@@ -7,7 +7,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import React from "react";
 import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
-import "./index.scss";
+import "@atlaskit/css-reset";
 
 export const history = createBrowserHistory();
 const { store, persistor } = configureStore(history);

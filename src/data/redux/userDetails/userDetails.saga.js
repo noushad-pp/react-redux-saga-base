@@ -14,7 +14,8 @@ export function* login() {
       payload: {
         user: {
           id: 1,
-          name: "John Doe",
+          firstname: "John",
+          lastname: "Doe",
           email: "john.doe@email.com"
         }
       }

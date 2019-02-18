@@ -8,8 +8,7 @@ import { routerMiddleware } from "connected-react-router";
 
 const persistConfig = {
   key: "root",
-  storage,
-  whitelist: []
+  storage
 };
 
 const configureStore = (history, initialState = {}) => {
